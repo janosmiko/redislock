@@ -6,9 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/go-redis/redis/v9"
-
 	"github.com/bsm/redislock"
+	"github.com/redis/go-redis/v9"
 )
 
 func Example() {
