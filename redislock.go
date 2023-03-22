@@ -98,7 +98,7 @@ func (c *Client) Obtain(ctx context.Context, key string, ttl time.Duration, opt 
 
 		select {
 		case <-ctx.Done():
-			return nil, ErrNotObtained
+			return nil, ctx.Err()
 		case <-ticker.C:
 		}
 	}
